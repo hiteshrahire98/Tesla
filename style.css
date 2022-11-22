@@ -1,0 +1,29 @@
+/*p {
+    background-color:grey;
+    height:125px;
+    width:50%;
+    color:black;
+}*/
+
+#p1 {
+    background-color: grey;
+    height: 125px;
+    width: 50%;
+    color: black;
+}
+
+#p2 {
+    background-color: grey;
+    height: 125px;
+    width: 50%;
+    color: black;
+}
+
+h1 {
+    color:red;
+}
+.textCenter {
+    text-align:center;
+    font-size:30px;
+}
+
