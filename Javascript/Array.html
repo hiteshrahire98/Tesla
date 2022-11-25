@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Array</title>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+
+    <div id="div2">
+
+    </div>
+
+    <script>
+        // Array in Javascript..
+
+        var names = ["Hitesh", "Nitin", "Sachin", "Abhi", "Chetan"];
+        console.log(names[0]);
+
+        //names[4] = "Yash";
+        console.log(names);
+
+        // add at the last
+        names.push("Rohan");
+
+        // add at the first
+        names.unshift("Suraj");
+
+        names.pop();   // remove the last element
+
+        names.shift();  // remove the first element
+
+        names.splice(1, 0, "Tushar", "Anil"); // to add in between + can replace the elemet using delete count
+
+        names.sort();
+        names.reverse();
+
+        var newNames = names.slice(1, 6);
+        console.log(newNames);
+
+
+        // print or display using html
+        var data = "<ol type='i'>";
+        for (var i = 0; i < names.length; i++) {
+            data += "<li>" + names[i] + "</li>";
+        }
+        data += "</ol>";
+        console.log(data);
+        document.getElementById("div1").innerHTML = data;
+    </script>
+
+    <script>
+        // forEach Loop Using Array..
+        var names = ["Atul", "Rajesh", "Kishor", "Ajay", "Amol"];
+
+        var data = "<ol>";
+        names.forEach(myFunction);
+        data += "</ol>";
+
+        function myFunction(value) {
+            data += "<li>" + value + "</li>";
+        }
+
+        var nos = [78, 45, 23, 67, 89];
+
+        var data2 = "<ol>";
+        nos.forEach(myfunction2);
+        data2 += "</ol>";
+
+        function myfunction2(value) {
+            if (value < 50) {
+                data2 += "<li>" + value + "</li>";
+            }
+        }
+        document.getElementById("div1").innerHTML = data;
+        document.getElementById("div2").innerHTML = data2;
+    </script>
+
+
+    <script>
+        // working with string in Javascript
+
+        var text = "  this,is,sample,text  ";
+
+        console.log(text.charAt(6));
+
+        var text2 = "Hello";
+
+        var result = text.concat(" ", text2, " ", "Good Morning");
+        console.log(result);
+
+        console.log(result.length);
+
+        // var txt = text.slice(4);
+        var txt = text.slice(4, 11);
+
+        var data = text.split(",");
+        //var data = text.split(" ", 3);
+        console.log(data);
+
+        console.log(txt);
+
+        console.log(text.toUpperCase());
+        console.log(text.toLowerCase());
+
+        // trim
+        text.trim();
+
+    </script>
+
+   
+    <script>
+
+        // working with number in Javascript
+
+        var num = 23.768;
+
+        var text = num.toString(); // convert number to string
+        console.log(text);
+
+        var no = num.toFixed(2); // currency
+        console.log(no);
+
+    </script>
+
+</body>
+</html>
