@@ -6,25 +6,71 @@
     <meta charset="utf-8" />
     <title>Mathematics Operations</title>
 </head>
-<body>
-   
-        <div>
-            Enter a Number: <input type="text" /><br />
+<body>   
+            Enter a Number: <input type="text" id="t1"/><br />
             <br />
-            Enter a Number: <input type="text" />
+            Enter a Number: <input type="text" id="t2"/>
             <br />
             <br />
-            Result: <input type="text" /><br />
+            Result: <input type="text" id="t3"/><br />
             <br />
-            <input type="button" value="Add" />
-            <input type="button" value="Sub" />
-            <input type="button" value="Multiply" /><br />
+            <input type="button" value="Add" onclick="add()"/>
+            <input type="button" value="Sub" onclick="sub()" />
+            <input type="button" value="Multiply" onclick="mult()"/><br />
             <br />
-            <input type="button" value="Div" />
-            <input type="button" value="Mod" />
-            <input type="button" value="Square" />
-        </div> 
-   
+            <input type="button" value="Div" onclick="div()"/>
+            <input type="button" value="Mod" onclick="mod()"/>
+            <input type="button" value="Square" onclick="square()"/>
+      
+     <script>
+         function add() {
+             var a = document.getElementById("t1").value;
+             var b = document.getElementById("t2").value;
+             var sum = parseInt(a) + parseInt(b);
+             document.getElementById("t3").value = sum;
+
+         }
+
+         function sub() {
+             var a = document.getElementById("t1").value;
+             var b = document.getElementById("t2").value;
+             var s = parseInt(a) - parseInt(b);
+             document.getElementById("t3").value = s;
+
+         }
+
+         function mult() {
+             var a = document.getElementById("t1").value;
+             var b = document.getElementById("t2").value;
+             var m = parseInt(a) * parseInt(b);
+             document.getElementById("t3").value = m;
+
+         }
+
+         function div() {
+             var a = document.getElementById("t1").value;
+             var b = document.getElementById("t2").value;
+             var d = parseInt(a) / parseInt(b);
+             document.getElementById("t3").value = d;
+
+         }
+
+         function mod() {
+             var a = document.getElementById("t1").value;
+             var b = document.getElementById("t2").value;
+             var md = parseInt(a) % parseInt(b);
+             document.getElementById("t3").value = md;
+
+         }
+
+         function square() {
+             var a = document.getElementById("t1").value;
+           
+             var sq = parseInt(a) * parseInt(a);
+             document.getElementById("t3").value = sq;
+
+         }
+     </script>
     
 </body>
 </html>
