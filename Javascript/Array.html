@@ -111,7 +111,7 @@
 
     </script>
 
-   
+
     <script>
 
         // working with number in Javascript
@@ -125,6 +125,76 @@
         console.log(no);
 
     </script>
+
+    <script>
+
+        // working with object in javascript
+
+        var employee = {
+            id: 1,
+            name: "Amol",
+            salary: 56000,
+
+            print: function () {
+                return "Employee Details " + this.id + " " + this.name + "  " + this.salary;
+            },
+
+            calculateSalary: function () {
+                var bonus = this.salary * 0.10;
+                this.salary += bonus;
+                return this.salary;
+            }
+        };
+
+        console.log(employee.print());
+        console.log(employee.calculateSalary());
+
+    </script>
+
+
+    <script>
+
+        // working with object in javascript
+
+        var employees =
+            [
+                {
+                    id: 1,
+                    name: "Amol",    //employees[0]
+                    salary: 56000
+
+                },
+                {
+                    id: 2,
+                    name: "Amol",   //employees[1]
+                    salary: 56000
+
+                },
+                {
+                    id: 3,
+                    name: "Amol",
+                    salary: 56000
+                },
+                {
+                    id: 4,
+                    name: "Amol",
+                    salary: 56000
+                }
+            ]
+
+        console.log(employees);
+
+        var data = "<table border='1'><tr><th>Id</th><th>Name</th><th>Salary</th></tr>";
+        for (var i = 0; i < employees.length; i++) {
+            data += "<tr><td>" + employees[i].id + "</td><td>" + employees[i].name + "</td><td>" +
+                employees[i].salary + "</td></tr>";
+        }
+
+        data += "</table>";
+        document.getElementById("div1").innerHTML = data;
+
+    </script>
+
 
 </body>
 </html>
